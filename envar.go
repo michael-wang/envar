@@ -102,7 +102,8 @@ func Float(key string) float64 {
 	return 0
 }
 
-// MilliSeconds returns milli-second (of type time.Duration) value based on key.
+// MilliSeconds assumes key mapped to value of millisecond (e.g. 1000 for one second),
+// and returns it as time.Duration type.
 func MilliSeconds(key string) time.Duration {
 	v := Get(key)
 
