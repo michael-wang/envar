@@ -19,6 +19,11 @@ func SetDef(key string, value interface{}) {
 	defVals[key] = value
 }
 
+// GetDefs returns default key/value pairs.
+func GetDefs() map[string]interface{} {
+	return defVals
+}
+
 // Load filenames, or .env if called by Load().
 //
 // Notice existed env var won't be replaced by loading these files.
